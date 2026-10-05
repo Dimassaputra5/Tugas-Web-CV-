@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,54 +8,78 @@
       content="Portofolio Muhamad Dimas Saputra - Informatics Engineering Student at UIN Jakarta | AI/ML Enthusiast"
     />
     <title>Muhamad Dimas Saputra | Portofolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
 
     <header class="site-header">
-      <div class="container">
-        <nav class="site-nav" aria-label="Navigasi utama">
-          <a class="brand" href="#hero">Muhamad Dimas Saputra</a>
-          <ul>
-            <li><a href="#tentang">Tentang</a></li>
-            <li><a href="#keahlian">Keahlian</a></li>
-            <li><a href="#pendidikan">Pendidikan</a></li>
-            <li><a href="#sertifikasi">Sertifikasi</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="navbar navbar-expand-lg" aria-label="Navigasi utama">
+        <div class="container">
+          <a class="navbar-brand brand" href="#hero">Muhamad Dimas Saputra</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Buka navigasi"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+              <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+              <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+              <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sertifikasi">Sertifikasi</a></li>
+              <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main id="main-content">
       <section id="hero" class="hero section">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">PORTOFOLIO / CV</p>
-            <h1>Muhamad Dimas Saputra</h1>
-            <p class="headline">
-              Informatics Engineering Student at UIN Jakarta | AI/ML Enthusiast
-            </p>
-            <p class="location">Kota Tangerang Selatan, Banten, Indonesia</p>
-            <div class="hero-actions">
-              <a href="#kontak" class="btn btn-primary">Hubungi Saya</a>
-              <a
-                href="https://www.linkedin.com/in/muhamad-dimas-saputra"
-                class="btn btn-secondary"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn</a
-              >
+        <div class="container">
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-7 d-flex flex-column justify-content-center">
+              <p class="eyebrow">PORTOFOLIO / CV</p>
+              <h1>Muhamad Dimas Saputra</h1>
+              <p class="headline">
+                Informatics Engineering Student at UIN Jakarta | AI/ML Enthusiast
+              </p>
+              <p class="location">Kota Tangerang Selatan, Banten, Indonesia</p>
+              <div class="hero-actions">
+                <a href="#kontak" class="btn btn-primary">Hubungi Saya</a>
+                <a
+                  href="https://www.linkedin.com/in/muhamad-dimas-saputra"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="hero-card" aria-hidden="true">
-            <p class="hero-card-title">Fokus</p>
-            <ul>
-              <li>Machine Learning</li>
-              <li>Computer Vision</li>
-              <li>Deep Learning</li>
-            </ul>
+            <div class="col-lg-5">
+              <div class="hero-card h-100">
+                <p class="hero-card-title">Fokus</p>
+                <ul class="mb-0">
+                  <li>Machine Learning</li>
+                  <li>Computer Vision</li>
+                  <li>Deep Learning</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -74,11 +98,43 @@
       <section id="keahlian" class="section section-alt">
         <div class="container">
           <h2>Keahlian</h2>
-          <ul class="chip-list">
-            <li>Computer Vision</li>
-            <li>Deep Learning</li>
-            <li>Routing Protocols</li>
+          <ul class="chip-list" aria-label="Daftar keahlian">
+            <li><span class="badge rounded-pill text-bg-primary">Computer Vision</span></li>
+            <li><span class="badge rounded-pill text-bg-primary">Deep Learning</span></li>
+            <li><span class="badge rounded-pill text-bg-primary">Routing Protocols</span></li>
           </ul>
+        </div>
+      </section>
+
+      <section id="proyek" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow mb-2">AREA EKSPLORASI</p>
+            <h2>Fokus &amp; Proyek</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="project-card h-100">
+                <div class="project-icon" aria-hidden="true">ML</div>
+                <h3>Machine Learning</h3>
+                <p class="muted mb-0">Mengeksplorasi solusi berbasis AI yang bermanfaat dan terukur.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="project-card h-100">
+                <div class="project-icon" aria-hidden="true">CV</div>
+                <h3>Computer Vision</h3>
+                <p class="muted mb-0">Mendalami cara komputer memahami informasi visual dari dunia nyata.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="project-card h-100">
+                <div class="project-icon" aria-hidden="true">DL</div>
+                <h3>Deep Learning</h3>
+                <p class="muted mb-0">Mengembangkan kemampuan teknis melalui latihan dan pembelajaran berkelanjutan.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -125,10 +181,15 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer mt-auto">
       <div class="container">
         <p>© 2026 Muhamad Dimas Saputra</p>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
