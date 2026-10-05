@@ -16,25 +16,25 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#main-navigation" data-bs-smooth-scroll="true" tabindex="0">
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
 
     <header class="site-header">
-      <nav class="navbar navbar-expand-lg" aria-label="Navigasi utama">
+      <nav id="main-navigation" class="navbar navbar-expand-lg" aria-label="Navigasi utama">
         <div class="container">
-          <a class="navbar-brand brand" href="#hero">Muhamad Dimas Saputra</a>
+          <a class="navbar-brand brand nav-link" href="#hero">Muhamad Dimas Saputra</a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#main-navigation"
-            aria-controls="main-navigation"
+            data-bs-target="#navbar-menu"
+            aria-controls="navbar-menu"
             aria-expanded="false"
             aria-label="Buka navigasi"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="main-navigation">
+          <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
               <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
@@ -191,5 +191,21 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const navbarMenu = document.querySelector("#navbar-menu");
+      const navbarLinks = document.querySelectorAll("#navbar-menu .nav-link");
+
+      navbarLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (navbarMenu.classList.contains("show")) {
+            bootstrap.Collapse.getOrCreateInstance(navbarMenu).hide();
+          }
+        });
+      });
+
+      bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
+        target: "#main-navigation",
+      });
+    </script>
   </body>
 </html>

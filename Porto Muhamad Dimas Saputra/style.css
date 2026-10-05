@@ -56,6 +56,40 @@ body {
   color: var(--primary-soft);
   font-weight: 700;
   font-size: 1.05rem;
+  border-radius: 0.5rem;
+}
+
+.navbar {
+  --bs-navbar-padding-y: 0.7rem;
+}
+
+.navbar .nav-link {
+  color: var(--muted);
+  border-radius: 0.5rem;
+  margin: 0.15rem;
+  padding: 0.45rem 0.7rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .nav-link.active {
+  color: var(--text);
+  background: rgba(79, 140, 255, 0.16);
+}
+
+.navbar .navbar-brand.nav-link {
+  color: var(--primary-soft);
+  margin-left: 0;
+  padding-left: 0;
+  background: transparent;
+}
+
+.navbar-toggler {
+  border-color: var(--border);
+}
+
+.navbar-toggler:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(131, 173, 255, 0.35);
 }
 
 a {
@@ -266,6 +300,10 @@ h2 {
 @media (max-width: 800px) {
   .navbar-collapse {
     padding-top: 0.75rem;
+  }
+
+  .navbar .nav-link {
+    margin: 0.15rem 0;
   }
 
   .section {
